@@ -22,63 +22,67 @@ public class PlayerAnimations : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
         newPos = gameObject.GetComponent<Transform>().position;
 
-
+        
         if (gameObject.GetComponentInChildren<Animator>() != null)
         {
             characterAnimator = gameObject.GetComponentInChildren<Animator>();
 
-            if (oldPos.y < newPos.y)
-            {
-                Reset();
-                characterAnimator.SetBool("walkUp", true);
-            }
-
-            if (oldPos.x > newPos.x)
-            {
-                Reset();
-                characterAnimator.SetBool("walkLeft", true);
-            }
-
-            if (oldPos.y > newPos.y)
-            {
-                Reset();
-                characterAnimator.SetBool("walkDown", true);
-            }
-
-            if (oldPos.x < newPos.x)
-            {
-                Reset();
-                characterAnimator.SetBool("walkRight", true);
-            }
-
-            if (oldPos == newPos && characterAnimator.GetBool("walkUp") == true)
+            if (!Input.GetKey("z") && !Input.GetKey("q") && !Input.GetKey("s") && !Input.GetKey("d")
+                && characterAnimator.GetBool("walkUp") == true)
             {
                 Reset();
                 characterAnimator.SetBool("idleUp", true);
             }
 
-            if (oldPos == newPos && characterAnimator.GetBool("walkLeft") == true)
+            if (!Input.GetKey("z") && !Input.GetKey("q") && !Input.GetKey("s") && !Input.GetKey("d") 
+                && characterAnimator.GetBool("walkLeft") == true)
             {
                 Reset();
                 characterAnimator.SetBool("idleLeft", true);
             }
 
-            if (oldPos == newPos && characterAnimator.GetBool("walkDown") == true)
+            if (!Input.GetKey("z") && !Input.GetKey("q") && !Input.GetKey("s") && !Input.GetKey("d") 
+                && characterAnimator.GetBool("walkDown") == true)
             {
                 Reset();
                 characterAnimator.SetBool("idleDown", true);
             }
 
-            if (oldPos == newPos && characterAnimator.GetBool("walkRight") == true)
+            if (!Input.GetKey("z") && !Input.GetKey("q") && !Input.GetKey("s") && !Input.GetKey("d") 
+                && characterAnimator.GetBool("walkRight") == true)
             {
                 Reset();
                 characterAnimator.SetBool("idleRight", true);
             }
 
+            if (Input.GetKey("z"))
+            {
+                Reset();
+                characterAnimator.SetBool("walkUp", true);
+            }
+
+            if (Input.GetKey("q"))
+            {
+                Reset();
+                characterAnimator.SetBool("walkLeft", true);
+            }
+
+            if (Input.GetKey("s"))
+            {
+                Reset();
+                characterAnimator.SetBool("walkDown", true);
+            }
+
+            if (Input.GetKey("d"))
+            {
+                Reset();
+                characterAnimator.SetBool("walkRight", true);
+            }
+                        
         }
         else
         {
@@ -86,7 +90,7 @@ public class PlayerAnimations : MonoBehaviour {
         }
 
         oldPos = newPos;
-
+        
     }
 
     private void Reset()

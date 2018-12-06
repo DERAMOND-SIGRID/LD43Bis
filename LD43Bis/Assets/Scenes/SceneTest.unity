@@ -113,12 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &652008172
+--- !u!1001 &386219841
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 911576747}
+    m_TransformParent: {fileID: 1389632653}
     m_Modifications:
     - target: {fileID: 4549094747954198, guid: a55557e4523f3cb498eba05dffa0ffde, type: 2}
       propertyPath: m_LocalPosition.x
@@ -151,6 +151,21 @@ Prefab:
     - target: {fileID: 4549094747954198, guid: a55557e4523f3cb498eba05dffa0ffde, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212165957040827158, guid: a55557e4523f3cb498eba05dffa0ffde,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212165957040827158, guid: a55557e4523f3cb498eba05dffa0ffde,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212165957040827158, guid: a55557e4523f3cb498eba05dffa0ffde,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a55557e4523f3cb498eba05dffa0ffde, type: 2}
@@ -232,40 +247,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &911576743 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1896759346496264, guid: ae69bbb4cd82d3f4a88fadd0d744cd58,
-    type: 2}
-  m_PrefabInternal: {fileID: 1062336349}
---- !u!114 &911576744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 911576743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b27030e38141cb847938347f6386d16c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.5
---- !u!4 &911576747 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4502791634408450, guid: ae69bbb4cd82d3f4a88fadd0d744cd58,
-    type: 2}
-  m_PrefabInternal: {fileID: 1062336349}
---- !u!114 &911576748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 911576743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d35d68fe66a6cc742834c3e2f2b03d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &1062336349
+--- !u!1001 &1389632652
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -304,7 +286,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114450034983523716, guid: ae69bbb4cd82d3f4a88fadd0d744cd58, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae69bbb4cd82d3f4a88fadd0d744cd58, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &1389632653 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4502791634408450, guid: ae69bbb4cd82d3f4a88fadd0d744cd58,
+    type: 2}
+  m_PrefabInternal: {fileID: 1389632652}

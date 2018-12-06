@@ -14,10 +14,11 @@ public class PlayerMoves : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        newPos = gameObject.GetComponent<Transform>().position;
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
         if (moveSpeed != 0) {
 
