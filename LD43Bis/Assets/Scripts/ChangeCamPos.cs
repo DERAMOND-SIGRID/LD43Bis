@@ -19,8 +19,12 @@ public class ChangeCamPos : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Camera.main.GetComponent<Transform>().position != new Vector3(cameraPosition.x, cameraPosition.y, Camera.main.GetComponent<Transform>().position.z)) {
-            Camera.main.GetComponent<Transform>().position = new Vector3(cameraPosition.x, cameraPosition.y, Camera.main.GetComponent<Transform>().position.z);
+        if (collision.gameObject.name == "Player")
+        {
+            if (Camera.main.GetComponent<Transform>().position != new Vector3(cameraPosition.x, cameraPosition.y, Camera.main.GetComponent<Transform>().position.z))
+            {
+                Camera.main.GetComponent<Transform>().position = new Vector3(cameraPosition.x, cameraPosition.y, Camera.main.GetComponent<Transform>().position.z);
+            }
         }
     }
 
