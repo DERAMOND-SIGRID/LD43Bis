@@ -7,12 +7,15 @@ public class GameManager : MonoBehaviour {
         
     private bool isWarriorAlive;
     public void SetIsWarriorAlive(bool isHe) { isWarriorAlive = isHe; }
+    public bool GetIsWarriorAlive() { return isWarriorAlive; }
 
     private bool isArcherAlive;
     public void SetIsArcherAlive(bool isHe) { isArcherAlive = isHe; }
+    public bool GetIsArcherAlive() { return isArcherAlive; }
 
     private bool isPicklockAlive;
     public void SetIsPicklockAlive(bool isHe) { isPicklockAlive = isHe; }
+    public bool GetIsPicklockAlive() { return isPicklockAlive; }
 
     [SerializeField]
     private GameObject audioLevel;
@@ -23,6 +26,17 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private GameObject selectMenu;
     private GameObject instanceSelectMenu;
+
+    [SerializeField]
+    private GameObject warrior;
+
+    [SerializeField]
+    private GameObject archer;
+
+    [SerializeField]
+    private GameObject picklock;
+
+    private int currentLevel;
 
     // Use this for initialization
     void Start () {
@@ -54,6 +68,7 @@ public class GameManager : MonoBehaviour {
 
     private void ShowSelectMenu()
     {
+        canvas = GameObject.Find("Canvas");
         instanceSelectMenu = Instantiate(selectMenu, canvas.GetComponent<Transform>());
     }
 
@@ -70,6 +85,26 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public void InstantiateNewCharacter(string name)
+    {        
+        Vector2 spawnPos = GameObject.Find("Grid").GetComponent<LevelManager>().GetSpawnPosition();
+        GameObject player = GameObject.Find("Player");
+        player.GetComponent<Transform>().position = spawnPos;
+
+        if (name == "Warrior")
+        {
+            Instantiate(warrior, player.GetComponent<Transform>());
+        }
+        else if (name == "Archer")
+        {
+            Instantiate(archer, player.GetComponent<Transform>());
+        }
+        else if (name == "Picklock")
+        {
+            Instantiate(picklock, player.GetComponent<Transform>());
+        }
+    }
+
     private void PlayAudioLevel()
     {
         if (instanceAudioLevel == null)
@@ -81,9 +116,10 @@ public class GameManager : MonoBehaviour {
     public void LaunchLevel1()
     {
         PlayAudioLevel();
-
+                
         SceneManager.LoadScene(1);
 
+        currentLevel = 1;        
     }
 
     public void LaunchLevel2()

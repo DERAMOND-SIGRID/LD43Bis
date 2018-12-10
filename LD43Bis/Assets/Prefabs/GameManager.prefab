@@ -52,3 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioLevel: {fileID: 1533083244686068, guid: 8035267c750082740b10b2eeea54b366, type: 2}
+  selectMenu: {fileID: 1400373272110338, guid: 04d7b03c9fb8a234cbefecefeea14f46, type: 2}
+  warrior: {fileID: 1721433809670680, guid: a55557e4523f3cb498eba05dffa0ffde, type: 2}
+  archer: {fileID: 0}
+  picklock: {fileID: 0}

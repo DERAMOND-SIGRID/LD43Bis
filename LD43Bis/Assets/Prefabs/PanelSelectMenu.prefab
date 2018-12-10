@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222596502217412916}
   - component: {fileID: 114340757943990030}
   - component: {fileID: 114798033474338816}
+  - component: {fileID: 114211442584421902}
   m_Layer: 5
   m_Name: ButtonSelectValid
   m_TagString: Untagged
@@ -57,6 +58,7 @@ GameObject:
   - component: {fileID: 222335621458327184}
   - component: {fileID: 114110682509576206}
   - component: {fileID: 114460954557005788}
+  - component: {fileID: 114488154701695756}
   m_Layer: 5
   m_Name: ButtonSelectArcher
   m_TagString: Untagged
@@ -141,6 +143,7 @@ GameObject:
   - component: {fileID: 222889663332774040}
   - component: {fileID: 114159622240791988}
   - component: {fileID: 114386595570905708}
+  - component: {fileID: 114935890103640440}
   m_Layer: 5
   m_Name: ButtonSelectWarrior
   m_TagString: Untagged
@@ -159,6 +162,7 @@ GameObject:
   - component: {fileID: 222579621763163948}
   - component: {fileID: 114545329469187686}
   - component: {fileID: 114366163220237148}
+  - component: {fileID: 114099748701387036}
   m_Layer: 5
   m_Name: ButtonSelectPicklock
   m_TagString: Untagged
@@ -237,6 +241,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114099748701387036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823089604223134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a2e762281203c429ee911132d26103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Picklock
+  buttonValid: {fileID: 1101128203189320}
 --- !u!114 &114110682509576206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,6 +308,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114211442584421902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1101128203189320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 040e59f3e494b704287f04fb74dfa17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114233592092765706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -418,7 +446,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114545329469187686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114099748701387036}
+        m_MethodName: SelectCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114386595570905708
@@ -459,7 +498,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114159622240791988}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114935890103640440}
+        m_MethodName: SelectCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114432508353127986
@@ -527,9 +577,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114110682509576206}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114488154701695756}
+        m_MethodName: SelectCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114488154701695756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1364378453735272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a2e762281203c429ee911132d26103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Archer
+  buttonValid: {fileID: 1101128203189320}
 --- !u!114 &114545329469187686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -595,9 +669,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114340757943990030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114211442584421902}
+        m_MethodName: ValidChoosenCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114935890103640440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715166053008322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a2e762281203c429ee911132d26103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Warrior
+  buttonValid: {fileID: 1101128203189320}
 --- !u!222 &222334194972254888
 CanvasRenderer:
   m_ObjectHideFlags: 1

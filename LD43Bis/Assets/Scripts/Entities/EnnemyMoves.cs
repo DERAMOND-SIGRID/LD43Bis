@@ -27,11 +27,13 @@ public class EnnemyMoves : MonoBehaviour {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         newPos = gameObject.GetComponent<Transform>().position;
         attackDistance = gameObject.GetComponent<Character>().GetAttackDistance();
-        player = GameObject.Find("Player");
+        
     }
 	
 	// Update is called once per frame
 	void FixedUpdate() {
+
+        player = GameObject.Find("Player");
 
         if (player.GetComponentInChildren<CharacterPlayable>() != null && gameObject.GetComponent<CharacterNonPlayable>().GetIsFightAllowed() == true)
         {

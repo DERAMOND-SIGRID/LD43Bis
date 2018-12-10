@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114502832469936086}
   - component: {fileID: 114089654267274982}
   - component: {fileID: 114561336930874932}
+  - component: {fileID: 95014740383648364}
+  - component: {fileID: 114709536052832242}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Untagged
@@ -90,6 +92,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95014740383648364
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1524882729010656}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: c41fa6c958c824645ad8513d2d7f9e2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114089654267274982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,6 +146,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020e5b734affc554f96186d6c16f136a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114709536052832242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1524882729010656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51fd0aca8b6aea43895f1a0876aaa3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212969046046832724
